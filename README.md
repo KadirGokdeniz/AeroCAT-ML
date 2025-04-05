@@ -36,7 +36,7 @@ Our approach delivers three core advancements:
 - Optimized model captured non-linear relationships in upper tropospheric instability
 
 ### 3. Seasonal & Diurnal Patterns
-- Winter months exhibited highest CAT frequency, with 2023-2024 peaking at ~1100 MOD CAT incidents
+- Winter months exhibited highest CAT frequency, with 2022-2024 peaking at ~1100 MOD CAT incidents
 - Evening hours (15:00-21:00) demonstrated 3.5× higher turbulence reports across all seasons
 
 <p align="center">
