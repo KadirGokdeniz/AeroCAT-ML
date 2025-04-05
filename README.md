@@ -21,12 +21,6 @@ This project pioneers a machine learning framework to predict high-altitude Clea
   <em>Spatial Distribution of CAT Reports and TI3 Index Across US Airspace (2022-2024)</em>
 </p>
 
-<p align="center">
-  <img src="/assets/cat_distribution.png" alt="Hourly & Monthly Distribution" width="500"/>
-  <br>
-  <em>Hourly & Monthly CAT Distribution</em>
-</p>
-
 ## 🔬 Scientific Innovation
 
 Our approach delivers three core advancements:
@@ -44,6 +38,12 @@ Our approach delivers three core advancements:
 ### 3. Seasonal & Diurnal Patterns
 - Winter months exhibited highest CAT frequency, with 2023-2024 peaking at ~1100 MOD CAT incidents
 - Evening hours (15:00-21:00) demonstrated 3.5× higher turbulence reports across all seasons
+
+<p align="center">
+  <img src="/assets/cat_distribution.png" alt="Hourly & Monthly Distribution" width="500"/>
+  <br>
+  <em>Hourly & Monthly CAT Distribution</em>
+</p>
 
 ## 📊 Methodology & Results
 
@@ -108,7 +108,7 @@ Our approach delivers three core advancements:
 ## 🛠️ Technical Specifications
 
 ### Turbulence Diagnostics Implemented
-- TI1, TI2, TI3 (Elrod's turbulence indices)
+- TI2, TI3 (Elrod's turbulence indices)
 - Richardson number and Brunt-Väisälä frequency
 - Vertical wind shear and horizontal divergence
 - Potential vorticity gradient
