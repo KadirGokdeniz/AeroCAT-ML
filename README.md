@@ -80,6 +80,12 @@ Our approach delivers three core advancements:
   <em>Feature Importance Rankings from XGBoost Model</em>
 </p>
 
+<p align="center">
+  <img src="/assets/cat_distribution.png" alt="Hourly & Monthly Distribution" width="500"/>
+  <br>
+  <em>Hourly & Monthly CAT Distribution</em>
+</p>
+
 ## 🌍 Impact & Applications
 
 ### Aviation Safety Enhancement
