@@ -23,6 +23,7 @@ This project pioneers a machine learning framework to predict high-altitude Clea
   <br>
   <em>Hourly & Monthly CAT Distribution</em>
 </p>
+
 ## 🔬 Scientific Innovation
 
 Our approach delivers three core advancements:
@@ -40,7 +41,6 @@ Our approach delivers three core advancements:
 ### 3. Seasonal & Diurnal Patterns
 - Winter months exhibited highest CAT frequency, with 2023-2024 peaking at ~1100 MOD CAT incidents
 - Evening hours (15:00-21:00) demonstrated 3.5× higher turbulence reports across all seasons
-- Jet stream seasonal shifts strongly correlated with turbulence patterns (R² = 0.74)
 
 ## 📊 Methodology & Results
 
@@ -141,10 +141,9 @@ The codebase is temporarily restricted due to journal review processes. Full rel
 
 **Kadir Gökdeniz**  
 Email: kadirgokdeniz@hotmail.com  
-LinkedIn: [linkedin.com/in/kadirgokdeniz](https://linkedin.com/in/kadirgokdeniz)  
+LinkedIn: [linkedin.com/in/kadirgokdeniz](https://www.linkedin.com/in/kadir-g%C3%B6kdeniz-16573127a/)  
 GitHub: [github.com/KadirGokdeniz](https://github.com/KadirGokdeniz)
 
 ## 🙏 Acknowledgments
 - This research was supported by the Presidency of Defence Industries of the Republic of Turkey under the SAYZEK-ATP program
 - EUROCONTROL for providing access to the BADA dataset
-- Technical mentorship from Tolga Baştürk
