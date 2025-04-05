@@ -133,7 +133,7 @@ The codebase is temporarily restricted due to journal review processes. Full rel
   title={Predictive Modeling of High-Altitude Clear Air Turbulence in the United States: A Machine Learning Approach},
   author={Gökdeniz, Kadir and Ülkü, İrem},
   journal={Under Review},
-  year={2024}
+  year={2025}
 }
 ```
 
