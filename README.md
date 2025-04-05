@@ -141,7 +141,7 @@ The codebase is temporarily restricted due to journal review processes. Full rel
 
 **Kadir Gökdeniz**  
 Email: kadirgokdeniz@hotmail.com  
-LinkedIn: [linkedin.com/in/kadirgokdeniz]((https://www.linkedin.com/in/kadir-g%C3%B6kdeniz-16573127a/))  
+LinkedIn: [linkedin.com/in/kadirgokdeniz](https://www.linkedin.com/in/kadir-g%C3%B6kdeniz-16573127a/)  
 GitHub: [github.com/KadirGokdeniz](https://github.com/KadirGokdeniz)
 
 ## 🙏 Acknowledgments
