@@ -18,6 +18,11 @@ This project pioneers a machine learning framework to predict high-altitude Clea
   <em>Spatial Distribution of CAT Reports and TI3 Index Across US Airspace (2022-2024)</em>
 </p>
 
+<p align="center">
+  <img src="/assets/cat_distribution.png" alt="Hourly & Monthly Distribution" width="500"/>
+  <br>
+  <em>Hourly & Monthly CAT Distribution</em>
+</p>
 ## 🔬 Scientific Innovation
 
 Our approach delivers three core advancements:
@@ -78,12 +83,6 @@ Our approach delivers three core advancements:
   <img src="/assets/feature.png" alt="Feature Importance" width="500"/>
   <br>
   <em>Feature Importance Rankings from XGBoost Model</em>
-</p>
-
-<p align="center">
-  <img src="/assets/cat_distribution.png" alt="Hourly & Monthly Distribution" width="500"/>
-  <br>
-  <em>Hourly & Monthly CAT Distribution</em>
 </p>
 
 ## 🌍 Impact & Applications
