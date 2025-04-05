@@ -13,7 +13,7 @@ This project pioneers a machine learning framework to predict high-altitude Clea
 - **Operational Relevance**: Identified critical spatiotemporal patterns for flight planning optimization
 
 <p align="center">
-  <img src="/assets/cat_hotspots_map.png" alt="CAT Hotspots" width="600"/>
+  <img src="/assets/spatial.png" alt="CAT Hotspots" width="600"/>
   <br>
   <em>Spatial Distribution of CAT Reports and TI3 Index Across US Airspace (2022-2024)</em>
 </p>
@@ -75,7 +75,7 @@ Our approach delivers three core advancements:
 | AdaBoost      | All Categories   | 0.893 | 0.770 | 0.161 | 0.682 | 0.633 |
 
 <p align="center">
-  <img src="/assets/feature_importance.png" alt="Feature Importance" width="500"/>
+  <img src="/assets/feature.png" alt="Feature Importance" width="500"/>
   <br>
   <em>Feature Importance Rankings from XGBoost Model</em>
 </p>
@@ -120,7 +120,7 @@ Our approach delivers three core advancements:
 - Model ensembling for final predictions
 
 ## ⚠️ Code Availability
-The codebase is temporarily restricted due to journal review processes. Full release is planned following publication (expected Q1 2025).
+The codebase is temporarily restricted due to journal review processes. Full release is planned following publication (expected Q2 2025).
 
 ## 📑 Citation
 ```bibtex
@@ -131,9 +131,6 @@ The codebase is temporarily restricted due to journal review processes. Full rel
   year={2024}
 }
 ```
-
-## 📊 Related Publications
-- Gökdeniz, K., and Bostanci, E. "Indoor Air Quality Predictions For Automation." The Journal of Artificial Intelligence and Human Sciences 1.1 (2024): 56-66.
 
 ## 📧 Contact
 
