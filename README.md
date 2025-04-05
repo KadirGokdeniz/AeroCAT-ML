@@ -5,6 +5,9 @@
 [![Status](https://img.shields.io/badge/Status-Under%20Review-yellow)](https://github.com/KadirGokdeniz/CAT-Predictor-ML)
 
 ## 🎯 Project Overview
+
+Clear Air Turbulence (CAT) represents one of the most significant safety challenges in modern aviation, responsible for approximately 71% of weather-related aircraft accidents and imposing annual economic costs of $100-200 million in the United States alone. Unlike other meteorological hazards, CAT occurs unexpectedly in clear skies without visual cues or reliable radar detection, making it particularly dangerous for passenger aircraft. Recent studies indicate a concerning upward trend in CAT occurrences across multiple regions, with strong correlations to global warming and climate-induced atmospheric instabilities. As air travel continues to expand globally and climate change alters traditional weather patterns, developing reliable prediction systems for this invisible threat has become increasingly urgent for aviation safety, operational efficiency, and passenger well-being. This research addresses this critical need through an innovative machine learning approach that significantly advances CAT forecasting capabilities.
+
 This project pioneers a machine learning framework to predict high-altitude Clear Air Turbulence (CAT) with remarkable accuracy (AUC: 0.904). By integrating aircraft aerodynamics with meteorological data, we've established a new benchmark for turbulence prediction in aviation safety.
 
 ### Key Achievements
@@ -16,12 +19,6 @@ This project pioneers a machine learning framework to predict high-altitude Clea
   <img src="/assets/spatial.png" alt="CAT Hotspots" width="600"/>
   <br>
   <em>Spatial Distribution of CAT Reports and TI3 Index Across US Airspace (2022-2024)</em>
-</p>
-
-<p align="center">
-  <img src="/assets/cat_distribution.png" alt="Hourly & Monthly Distribution" width="500"/>
-  <br>
-  <em>Hourly & Monthly CAT Distribution</em>
 </p>
 
 ## 🔬 Scientific Innovation
@@ -39,8 +36,14 @@ Our approach delivers three core advancements:
 - Optimized model captured non-linear relationships in upper tropospheric instability
 
 ### 3. Seasonal & Diurnal Patterns
-- Winter months exhibited highest CAT frequency, with 2023-2024 peaking at ~1100 MOD CAT incidents
+- Winter months exhibited highest CAT frequency, with 2022-2024 peaking at ~1100 MOD CAT incidents
 - Evening hours (15:00-21:00) demonstrated 3.5× higher turbulence reports across all seasons
+
+<p align="center">
+  <img src="/assets/cat_distribution.png" alt="Hourly & Monthly Distribution" width="500"/>
+  <br>
+  <em>Hourly & Monthly CAT Distribution</em>
+</p>
 
 ## 📊 Methodology & Results
 
@@ -105,7 +108,7 @@ Our approach delivers three core advancements:
 ## 🛠️ Technical Specifications
 
 ### Turbulence Diagnostics Implemented
-- TI1, TI2, TI3 (Elrod's turbulence indices)
+- TI2, TI3 (Elrod's turbulence indices)
 - Richardson number and Brunt-Väisälä frequency
 - Vertical wind shear and horizontal divergence
 - Potential vorticity gradient
@@ -133,7 +136,7 @@ The codebase is temporarily restricted due to journal review processes. Full rel
   title={Predictive Modeling of High-Altitude Clear Air Turbulence in the United States: A Machine Learning Approach},
   author={Gökdeniz, Kadir and Ülkü, İrem},
   journal={Under Review},
-  year={2024}
+  year={2025}
 }
 ```
 
