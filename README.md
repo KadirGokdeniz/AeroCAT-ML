@@ -127,9 +127,6 @@ Our approach delivers three core advancements:
 - Bayesian optimization for learning rate
 - Model ensembling for final predictions
 
-## ⚠️ Code Availability
-The codebase is temporarily restricted due to journal review processes. Full release is planned following publication (expected Q2 2025).
-
 ## 📑 Citation
 ```bibtex
 @article{gokdeniz2024cat,
