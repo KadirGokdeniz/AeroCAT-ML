@@ -2,7 +2,7 @@
 
 [![Aviation Safety](https://img.shields.io/badge/Aviation-Safety-blue)](https://github.com/KadirGokdeniz/CAT-Predictor-ML)
 [![AUC Score](https://img.shields.io/badge/AUC-0.904-success)](https://github.com/KadirGokdeniz/CAT-Predictor-ML)
-[![Status](https://img.shields.io/badge/Status-Under%20Review-yellow)](https://github.com/KadirGokdeniz/CAT-Predictor-ML)
+
 
 ## 🎯 Project Overview
 
