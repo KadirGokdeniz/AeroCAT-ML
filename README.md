@@ -1,149 +1,108 @@
 # CAT-Predictor-ML: High-Altitude Clear Air Turbulence Forecasting
 
-[![Aviation Safety](https://img.shields.io/badge/Aviation-Safety-blue)](https://github.com/KadirGokdeniz/CAT-Predictor-ML)
 [![AUC Score](https://img.shields.io/badge/AUC-0.904-success)](https://github.com/KadirGokdeniz/CAT-Predictor-ML)
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
 
+## Overview
 
-## 🎯 Project Overview
+Machine learning framework for predicting high-altitude Clear Air Turbulence (CAT) with 90.4% AUC accuracy. Integrates meteorological data, pilot reports, and aircraft aerodynamics to provide operational turbulence forecasts for aviation safety.
 
-Turbulence represents one of the most significant safety challenges in modern aviation, responsible for approximately 71% of weather-related aircraft accidents and imposing annual economic costs of $100-200 million in the United States alone. Unlike other meteorological hazards, CAT occurs unexpectedly in clear skies without visual cues or reliable radar detection, making it particularly dangerous for passenger aircraft. Recent studies indicate a concerning upward trend in CAT occurrences across multiple regions, with strong correlations to global warming and climate-induced atmospheric instabilities. As air travel continues to expand globally and climate change alters traditional weather patterns, developing reliable prediction systems for this invisible threat has become increasingly urgent for aviation safety, operational efficiency, and passenger well-being. This research addresses this critical need through an innovative machine learning approach that significantly advances CAT forecasting capabilities.
+## Problem Statement
 
-This project pioneers a machine learning framework to predict high-altitude Clear Air Turbulence (CAT) with remarkable accuracy (AUC: 0.904). By integrating aircraft aerodynamics with meteorological data, we've established a new benchmark for turbulence prediction in aviation safety.
+Clear Air Turbulence is a critical aviation challenge:
+- Responsible for 71% of weather-related aircraft accidents
+- $100-200M annual economic impact in the US
+- Invisible to pilots and radar systems
+- Increasing frequency due to climate change
 
-### Key Achievements
-- **Superior Detection**: 86.6% POD for moderate-to-severe turbulence
-- **Multi-Source Integration**: Combined ERA5 reanalysis, PIREPs, and BADA aerodynamic parameters
-- **Operational Relevance**: Identified critical spatiotemporal patterns for flight planning optimization
+## Key Features
 
-<p align="center">
-  <img src="/assets/spatial.png" alt="CAT Hotspots" width="600"/>
-  <br>
-  <em>Spatial Distribution of CAT Reports and TI3 Index Across US Airspace (2022-2024)</em>
-</p>
+- 86.6% POD for moderate-to-severe turbulence detection
+- Multi-source integration: ERA5 reanalysis + PIREPs + BADA aerodynamics
+- Aircraft-specific modeling accounting for different aircraft responses
+- Spatiotemporal pattern recognition for flight planning optimization
 
-## 🔬 Scientific Innovation
+## Performance Metrics
 
-Our approach delivers three core advancements:
+| Model | Dataset | AUC | POD | FAR | CSI |
+|-------|---------|-----|-----|-----|-----|
+| XGBoost+Aero | All Categories | **0.904** | **0.809** | 0.158 | **0.703** |
+| XGBoost+Aero | MOD-SEV Only | **0.928** | **0.866** | 0.150 | **0.753** |
+| LightGBM+Aero | All Categories | 0.902 | 0.815 | 0.166 | 0.701 |
 
-### 1. Aircraft-Specific Dynamics
-- Incorporated drag force, lift-to-drag ratio, and wing loading to quantify turbulence impact
-- Improved moderate-to-severe turbulence detection by 2.1% (POD from 0.845 to 0.866)
-- Reduced false negatives by 12% in critical severe turbulence scenarios
+## Dataset
 
-### 2. Atmospheric Predictors
-- Identified TI3 turbulence index and Richardson number as key indicators
-- Feature importance analysis revealed geographic coordinates (17.5%) and wind dynamics as dominant predictors
-- Optimized model captured non-linear relationships in upper tropospheric instability
+- **Period**: 2022-2024
+- **Region**: US Airspace (24°N-50°N, -125°E to -67°E)
+- **Altitude**: 200-350 hPa (~30,000-43,000 ft)
+- **Cases**: 38,426 balanced samples
+- **Resolution**: 0.25° spatial, 1-hour temporal
 
-### 3. Seasonal & Diurnal Patterns
-- Winter months exhibited highest CAT frequency, with 2022-2024 peaking at ~1100 MOD CAT incidents
-- Evening hours (15:00-21:00) demonstrated 3.5× higher turbulence reports across all seasons
+### Data Sources
 
-<p align="center">
-  <img src="/assets/cat_distribution.png" alt="Hourly & Monthly Distribution" width="500"/>
-  <br>
-  <em>Hourly & Monthly CAT Distribution</em>
-</p>
+**ERA5 Reanalysis**: ECMWF meteorological data  
+**PIREPs**: Iowa Environmental Mesonet pilot reports  
+**BADA**: EUROCONTROL aircraft performance parameters
 
-## 📊 Methodology & Results
+## Methodology
 
-### Data Integration Architecture
-```
-┌────────────┐    ┌────────────┐    ┌────────────┐
-│    ERA5    │    │   PIREPs   │    │    BADA    │
-│ Reanalysis │    │  Database  │    │ Aerodynamics│
-└─────┬──────┘    └─────┬──────┘    └─────┬──────┘
-      │                 │                 │
-      ▼                 ▼                 ▼
-┌─────────────────────────────────────────────┐
-│        Feature Engineering & Selection       │
-└─────────────────────┬───────────────────────┘
-                      │
-                      ▼
-┌─────────────────────────────────────────────┐
-│             Gradient Boosting Models         │
-└─────────────────────┬───────────────────────┘
-                      │
-                      ▼
-┌─────────────────────────────────────────────┐
-│         Spatiotemporal CAT Prediction        │
-└─────────────────────────────────────────────┘
-```
-
-### Performance Metrics
-
-| Model         | Dataset          | AUC   | POD   | FAR   | CSI   | TSS   |
-|---------------|------------------|-------|-------|-------|-------|-------|
-| XGBoost       | All Categories   | 0.901 | 0.796 | 0.154 | 0.695 | 0.652 |
-| XGBoost+Aero  | All Categories   | **0.904** | **0.809** | 0.158 | **0.703** | **0.657** |
-| XGBoost       | MOD-SEV Only     | 0.928 | 0.845 | 0.139 | 0.743 | 0.708 |
-| XGBoost+Aero  | MOD-SEV Only     | **0.928** | **0.866** | 0.150 | **0.753** | **0.716** |
-| LightGBM+Aero | All Categories   | 0.902 | 0.815 | 0.166 | 0.701 | 0.652 |
-| Random Forest | All Categories   | 0.889 | 0.785 | 0.170 | 0.676 | 0.624 |
-| AdaBoost      | All Categories   | 0.893 | 0.770 | 0.161 | 0.682 | 0.633 |
-
-<p align="center">
-  <img src="/assets/feature.png" alt="Feature Importance" width="500"/>
-  <br>
-  <em>Feature Importance Rankings from XGBoost Model</em>
-</p>
-
-## 🌍 Impact & Applications
-
-### Aviation Safety Enhancement
-- **Proactive Risk Management**: Early identification of CAT enables strategic route planning
-- **Operational Efficiency**: Reduced fuel consumption and emissions from unnecessary diversions
-- **ICAO Compliance**: Results compatible with standardized EDR turbulence metrics
-
-### Climate Adaptation Framework
-- Model framework adaptable to shifting jet stream patterns due to climate change
-- Potential to address the documented increase in CAT frequency and intensity
-- Baseline established for tracking long-term atmospheric stability trends
-
-### Beyond Aviation
-- Methodology applicable to autonomous aerial vehicle navigation systems
-- Potential extensions to wind energy optimization and atmospheric science research
-- Pattern recognition approach transferable to other complex fluid dynamics problems
-
-## 🛠️ Technical Specifications
-
-### Turbulence Diagnostics Implemented
-- TI2, TI3 (Elrod's turbulence indices)
-- Richardson number and Brunt-Väisälä frequency
-- Vertical wind shear and horizontal divergence
-- Potential vorticity gradient
-- Dutton's empirical index
-- Relative vorticity squared
+### Turbulence Diagnostics (14 parameters)
+TI2, TI3, Richardson number, Brunt-Väisälä frequency, vertical wind shear, horizontal divergence, potential vorticity gradient, relative vorticity squared, divergence tendency, Dutton index, temperature gradient, potential temperature, wind speed
 
 ### Aerodynamic Parameters
-- Maximum lift force and load factor
-- Drag force and lift-to-drag ratio
-- Wing loading and aspect ratio
-- Buffet coefficient integration
+Maximum lift force, load factor, drag force, lift-to-drag ratio, aspect ratio, wing loading
 
-### Machine Learning Pipeline
-- Stratified cross-validation (5-fold)
-- Hyperparameter optimization via grid search
-- Bayesian optimization for learning rate
-- Model ensembling for final predictions
+### Machine Learning
+- Algorithms: XGBoost, LightGBM, Random Forest, AdaBoost
+- 5-fold cross-validation, 70/30 train-test split
+- Grid search + Bayesian optimization
 
-## 📑 Citation
+## Key Findings
+
+### Feature Importance
+1. Longitude (11.0%) and Latitude (9.2%) - geographic influence
+2. TI3 Index (7.8%) - atmospheric instability
+3. Dutton Index (7.8%) - vertical wind shear
+4. Drag Force (3.2%) - top aerodynamic parameter
+
+### Temporal Patterns
+- **Winter peak**: ~1,100 MOD CAT incidents (Dec-Feb)
+- **Evening maximum**: 15:00-21:00 UTC (3.5× higher frequency)
+
+### Geographic Hotspots
+Southwest US, South-Central region, Eastern Seaboard, Northeast corridor
+
+### Aerodynamic Impact
+- POD improved from 0.845 to 0.866 for MOD-SEV (2.5% increase)
+- 12% reduction in false negatives for severe turbulence
+
+## Citation
+
 ```bibtex
-@article{gokdeniz2024cat,
-  title={Predictive Modeling of High-Altitude Clear Air Turbulence in the United States: A Machine Learning Approach},
+@article{gokdeniz2025cat,
+  title={Predictive Modeling of High-Altitude Clear Air Turbulence: 
+         A Machine Learning Approach},
   author={Gökdeniz, Kadir and Ülkü, İrem},
   journal={Under Review},
   year={2025}
 }
 ```
 
-## 📧 Contact
+## Contributing
+
+Priority areas: global data integration, real-time telemetry, deep learning approaches, operational deployment
+
+## Acknowledgments
+
+Supported by the Presidency of Defence Industries of Turkey (SAYZEK-ATP program) and EUROCONTROL (BADA database access)
+
+## Contact
 
 **Kadir Gökdeniz**  
 Email: kadirgokdeniz@hotmail.com  
 LinkedIn: [linkedin.com/in/kadirgokdeniz](https://www.linkedin.com/in/kadir-g%C3%B6kdeniz-16573127a/)  
 GitHub: [github.com/KadirGokdeniz](https://github.com/KadirGokdeniz)
 
-## 🙏 Acknowledgments
-- This research was supported by the Presidency of Defence Industries of the Republic of Turkey under the SAYZEK-ATP program
-- EUROCONTROL for providing access to the BADA dataset
+## License
+
+MIT License - See LICENSE file for details
