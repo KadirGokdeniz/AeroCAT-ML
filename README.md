@@ -52,21 +52,6 @@ Southwest US, South-Central region, Eastern Seaboard, Northeast corridor
 - POD improved from 0.845 to 0.866 for MOD-SEV (2.5% increase)
 - 12% reduction in false negatives for severe turbulence
 
-## Key Features
-
-- 86.6% POD for moderate-to-severe turbulence detection
-- Multi-source integration: ERA5 reanalysis + PIREPs + BADA aerodynamics
-- Aircraft-specific modeling accounting for different aircraft responses
-- Spatiotemporal pattern recognition for flight planning optimization
-
-## Performance Metrics
-
-| Model | Dataset | AUC | POD | FAR | CSI |
-|-------|---------|-----|-----|-----|-----|
-| XGBoost+Aero | All Categories | **0.904** | **0.809** | 0.158 | **0.703** |
-| XGBoost+Aero | MOD-SEV Only | **0.928** | **0.866** | 0.150 | **0.753** |
-| LightGBM+Aero | All Categories | 0.902 | 0.815 | 0.166 | 0.701 |
-
 ## Dataset
 
 - **Period**: 2022-2024
@@ -93,6 +78,22 @@ Maximum lift force, load factor, drag force, lift-to-drag ratio, aspect ratio, w
 - Algorithms: XGBoost, LightGBM, Random Forest, AdaBoost
 - 5-fold cross-validation, 70/30 train-test split
 - Grid search + Bayesian optimization
+
+
+## Key Features
+
+- 86.6% POD for moderate-to-severe turbulence detection
+- Multi-source integration: ERA5 reanalysis + PIREPs + BADA aerodynamics
+- Aircraft-specific modeling accounting for different aircraft responses
+- Spatiotemporal pattern recognition for flight planning optimization
+
+## Performance Metrics
+
+| Model | Dataset | AUC | POD | FAR | CSI |
+|-------|---------|-----|-----|-----|-----|
+| XGBoost+Aero | All Categories | **0.904** | **0.809** | 0.158 | **0.703** |
+| XGBoost+Aero | MOD-SEV Only | **0.928** | **0.866** | 0.150 | **0.753** |
+| LightGBM+Aero | All Categories | 0.902 | 0.815 | 0.166 | 0.701 |
 
 ## Citation
 
