@@ -65,12 +65,30 @@ Maximum lift force, load factor, drag force, lift-to-drag ratio, aspect ratio, w
 3. Dutton Index (7.8%) - vertical wind shear
 4. Drag Force (3.2%) - top aerodynamic parameter
 
+<p align="left">
+  <img src="/assets/feature.png" alt="Feature Importance Rankings" width="700"/>
+  <br>
+  <em>Feature Importance Rankings from XGBoost Model</em>
+</p>
+
 ### Temporal Patterns
 - **Winter peak**: ~1,100 MOD CAT incidents (Dec-Feb)
 - **Evening maximum**: 15:00-21:00 UTC (3.5× higher frequency)
 
+<p align="left">
+  <img src="/assets/cat_distribution.png" alt="Temporal Patterns" width="700"/>
+  <br>
+  <em>Turbulence Report Frequency by Month and Hour</em>
+</p>
+
 ### Geographic Hotspots
 Southwest US, South-Central region, Eastern Seaboard, Northeast corridor
+
+<p align="left">
+  <img src="/assets/spatial.png" alt="Spatial Distribution" width="700"/>
+  <br>
+  <em>Spatial Distribution of TI3 Index and CAT Events Across US Airspace (2022-2024)</em>
+</p>
 
 ### Aerodynamic Impact
 - POD improved from 0.845 to 0.866 for MOD-SEV (2.5% increase)
